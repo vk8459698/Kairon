@@ -27,12 +27,12 @@ class AgentState(BaseModel):
 
 # Initialize language models with different temperatures for different tasks
 # Using Groq models instead of OpenAI
-research_llm = ChatGroq(model="llama3-70b-8192", temperature=0.2, api_key="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")
-analysis_llm = ChatGroq(model="llama3-70b-8192", temperature=0.1, api_key="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")
-synthesis_llm = ChatGroq(model="llama3-70b-8192", temperature=0.5, api_key="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")
+research_llm = ChatGroq(model="llama3-70b-8192", temperature=0.2, api_key="your_grok_API")
+analysis_llm = ChatGroq(model="llama3-70b-8192", temperature=0.1, api_key="your_grok_API")
+synthesis_llm = ChatGroq(model="llama3-70b-8192", temperature=0.5, api_key="your_grok_API")
 
 # Initialize Tavily client with your API key
-tavily_client = TavilyClient(api_key="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")
+tavily_client = TavilyClient(api_key="your_tavily_API")
 
 # Create search tool using the decorator approach
 @tool
